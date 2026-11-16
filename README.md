@@ -59,15 +59,25 @@ prediction_single(ml_fit, gc_content = 0.6, RNA_type = "mRNA",
 For the bundled model, this yields the named character vector with probability
 `"0.51"` and status `"Positive"`. Equality with the threshold is Negative.
 
-## Example output
+## Model performance in the supplied fitted object
+
+![Out-of-bag ROC and precision-recall curves from the supplied random forest](man/figures/oob_performance.png)
+
+The supplied `rf_fit.rds` retains 48,055 training labels (11,248 Positive and
+36,807 Negative) and each row's out-of-bag (OOB) class votes. Using its
+Positive vote as the score gives an OOB ROC AUC of **0.887** and an OOB
+average precision of **0.702**. The dashed PRC baseline is the Positive
+fraction (about 0.234). These curves are based on the model's saved OOB
+predictions, **not an external or independent test set**. They should not be
+interpreted as clinical validation.
+
+## Example prediction scores
 
 ![Prediction scores for the bundled 100-row teaching example](man/figures/example_probabilities.png)
 
-The figure shows model scores for the supplied 100-row teaching example only.
-It is **not** a ROC or precision-recall curve, nor an independent performance
-estimate: the example table has no verified outcome labels. Replace or augment
-this figure with a validated evaluation from your own held-out labelled data
-if that analysis is available.
+This second figure shows model scores for the supplied 100-row teaching
+example only. That example table has no verified outcome labels, so it cannot
+be used to calculate an independent performance estimate.
 
 ## Check the package
 
