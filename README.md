@@ -8,10 +8,9 @@ demonstration, not a clinically validated diagnostic tool.
 
 ## Installation
 
-Once this package has been published in a public GitHub repository, install it
-with `remotes::install_github("YOUR_GITHUB_USERNAME/m6APrediction")`, replacing
-`YOUR_GITHUB_USERNAME` with the actual account name. To install from a source
-archive instead, use:
+Once the public repository is published, install it with
+`remotes::install_github("be-neuroflow/m6APrediction")`. To install from a
+source archive instead, use:
 
 ```r
 install.packages("m6APrediction_1.0.0.tar.gz", repos = NULL, type = "source")
