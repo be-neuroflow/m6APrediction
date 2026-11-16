@@ -1,0 +1,13 @@
+Package: m6APrediction
+Type: Package
+Title: Predict RNA m6A Sites from Sequence and Transcript Features
+Version: 1.0.0
+Authors@R: person("Yilin", "Xu", email = "yilin.xu24@student.xjtlu.edu.cn", role = c("aut", "cre"))
+Description: Uses the fitted random forest supplied with the BIO215 Practical 6
+    materials to predict m6A site status from a five nucleotide DNA context and
+    transcript features. Provides functions for a feature table or one site.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Depends: R (>= 3.5.0)
+Imports: randomForest, stats
+Config/roxygen2/version: 8.1.1
